@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com; object-src 'none'; base-uri 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://*.tile.openstreetmap.org https://firebasestorage.googleapis.com https://storage.googleapis.com https://*.googleusercontent.com; connect-src 'self' blob: capacitor: ionic: https://nominatim.openstreetmap.org https://*.googleapis.com https://*.cloudfunctions.net https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://firebaseinstallations.googleapis.com; frame-src https://www.google.com https://www.recaptcha.net;">
+  <title>Login</title>
+  <script src="/stateRestore.js" defer></script>
+  <script src="../mobileZoomLock.js" defer></script>
+  <style>
+    .login-page main {
+      max-width: 420px;
+      margin: 3rem auto;
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .login-page form {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .login-page input,
+    .login-page button {
+      font: inherit;
+      padding: 0.6rem 0.75rem;
+    }
+
+    .login-page #login-status {
+      min-height: 1.2rem;
+      margin-top: 0.75rem;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index-3398f4bb-OqqepCzU.js"></script>
+  <script type="module" crossorigin src="/assets/login-BJx-YvTk.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-3398f4bb-ClRPKboB.css">
+</head>
+<body class="login-page">
+  <main>
+    <h1>AVAP Admin Login</h1>
+
+    <form id="login-form">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required>
+
+      <button type="submit">Sign In</button>
+    </form>
+
+    <p id="login-status" aria-live="polite"></p>
+  </main>
+
+</body>
+</html>

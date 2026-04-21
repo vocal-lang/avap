@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com; object-src 'none'; base-uri 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://*.tile.openstreetmap.org https://firebasestorage.googleapis.com https://storage.googleapis.com https://*.googleusercontent.com; connect-src 'self' blob: capacitor: ionic: https://nominatim.openstreetmap.org https://*.googleapis.com https://*.cloudfunctions.net https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://firebaseinstallations.googleapis.com; frame-src https://www.google.com https://www.recaptcha.net;">
+    <title>Emergency Hotlines - AVAP</title>
+    <style>html,body{background-color:#f2f3f5}</style>
+    <script src="/stateRestore.js" defer></script>
+    <script src="../mobileZoomLock.js" defer></script>
+  <script type="module" crossorigin src="/assets/index-3398f4bb-OqqepCzU.js"></script>
+  <script type="module" crossorigin src="/assets/index-CXRZ8T9h.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-3398f4bb-ClRPKboB.css">
+</head>
+<body class="page-hotlines">
+    <div class="top-bar">
+        <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-menu">
+            <span class="menu-toggle__icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+        <aside class="hotline-block hotline-block--top-bar-mobile" aria-label="Victim services hotlines">
+            <button type="button" class="hotline-block__trigger" aria-expanded="false" aria-controls="hotline-panel-top">
+                <span class="hotline-block__trigger-text">Need immediate help?</span>
+                <span class="hotline-block__trigger-text--short">Immediate help</span>
+                <span class="hotline-block__chevron" aria-hidden="true">▼</span>
+            </button>
+            <div class="hotline-block__panel" id="hotline-panel-top" aria-hidden="true">
+                <p class="hotline-block__subtext">24/7 victim services hotlines</p>
+                <p class="hotline-block__helper">Tap a number to call.</p>
+                <ul class="hotline-block__list">
+                    <li><a href="tel:+18002393219" class="hotline-card"><span class="hotline-card__number">1-800-239-3219</span><span class="hotline-card__label">VOCAL — Victims of Crime and Leniency</span></a></li>
+                    <li><a href="tel:+18006506522" class="hotline-card"><span class="hotline-card__number">1-800-650-6522</span><span class="hotline-card__label">Alabama Coalition Against Domestic Violence</span></a></li>
+                    <li><a href="tel:+18006564673" class="hotline-card"><span class="hotline-card__number">1-800-656-4673</span><span class="hotline-card__label">RAINN Sexual Assault Hotline</span></a></li>
+                </ul>
+                <a class="hotline-block__see-more" href="./hotline.html">See more hotlines</a>
+            </div>
+        </aside>
+    </div>
+    <nav id="main-menu" class="main-menu" aria-hidden="false">
+        <div class="main-menu__inner">
+            <ul class="main-menu__list">
+                <li><a href="./home.html" class="main-menu__link">Home</a></li>
+                <li><a href="./about.html" class="main-menu__link">About</a></li>
+                <li><a href="./calendar.html" class="main-menu__link">Calendar</a></li>
+                <li><a href="./hotline.html" class="main-menu__link" aria-current="page">Hotlines</a></li>
+            </ul>
+            <aside class="hotline-block hotline-block--in-nav" aria-label="Victim services hotlines">
+                <button type="button" class="hotline-block__trigger" aria-expanded="false" aria-controls="hotline-panel-nav">
+                    <span class="hotline-block__trigger-text">Need immediate help?</span>
+                    <span class="hotline-block__trigger-text--short">Immediate help</span>
+                    <span class="hotline-block__chevron" aria-hidden="true">▼</span>
+                </button>
+                <div class="hotline-block__panel" id="hotline-panel-nav" aria-hidden="true">
+                    <p class="hotline-block__subtext">24/7 victim services hotlines</p>
+                    <p class="hotline-block__helper">Tap a number to call.</p>
+                    <ul class="hotline-block__list">
+                        <li><a href="tel:+18002393219" class="hotline-card"><span class="hotline-card__number">1-800-239-3219</span><span class="hotline-card__label">VOCAL — Victims of Crime and Leniency</span></a></li>
+                        <li><a href="tel:+18006506522" class="hotline-card"><span class="hotline-card__number">1-800-650-6522</span><span class="hotline-card__label">Alabama Coalition Against Domestic Violence</span></a></li>
+                        <li><a href="tel:+18006564673" class="hotline-card"><span class="hotline-card__number">1-800-656-4673</span><span class="hotline-card__label">RAINN Sexual Assault Hotline</span></a></li>
+                    </ul>
+                    <a class="hotline-block__see-more" href="./hotline.html">See more hotlines</a>
+                </div>
+            </aside>
+            <div class="main-menu__actions">
+                <button id="safety-exit" class="safety-exit-button" type="button" aria-label="Safety exit">
+                    Safety Exit
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <header>
+            <div class="header-row">
+                <div class="logo-crop">
+                    <img id="logo" src="/assets/AVAP-Logo-C6BSammJ.png" alt="AVAP Logo" />
+                </div>
+                <h1>Emergency Hotlines</h1>
+            </div>
+            <div class="privacy-statement-mobile" aria-label="Privacy policy">
+                <span class="privacy-statement-mobile__text"><strong>Privacy Policy:</strong> This site does not collect, store, or track any personal information. No user data is saved, tracked, or shared. All searches and questionnaire answers are processed only in your browser and are never sent to a server or stored anywhere.</span>
+                <button type="button" class="privacy-statement-mobile__toggle" aria-expanded="false">more</button>
+            </div>
+        </header>
+        <main class="page-content">
+            <div class="content-card">
+                <p>If you are in immediate danger, call <strong>911</strong>. Otherwise, tap a number below to call.</p>
+                <ul class="hotline-block__list" aria-label="All hotlines">
+                    <li><a href="tel:911" class="hotline-card"><span class="hotline-card__number">911</span><span class="hotline-card__label">Emergency services</span></a></li>
+                    <li><a href="tel:988" class="hotline-card"><span class="hotline-card__number">988</span><span class="hotline-card__label">Suicide &amp; Crisis Lifeline</span></a></li>
+                    <li><a href="tel:+18002393219" class="hotline-card"><span class="hotline-card__number">1-800-239-3219</span><span class="hotline-card__label">VOCAL — Victims of Crime and Leniency</span></a></li>
+                    <li><a href="tel:+18006506522" class="hotline-card"><span class="hotline-card__number">1-800-650-6522</span><span class="hotline-card__label">Alabama Coalition Against Domestic Violence</span></a></li>
+                    <li><a href="tel:+18007997233" class="hotline-card"><span class="hotline-card__number">1-800-799-7233</span><span class="hotline-card__label">National Domestic Violence Hotline</span></a></li>
+                    <li><a href="tel:+18006564673" class="hotline-card"><span class="hotline-card__number">1-800-656-4673</span><span class="hotline-card__label">RAINN / National Sexual Assault Hotline</span></a></li>
+                    <li><a href="tel:+18883737888" class="hotline-card"><span class="hotline-card__number">1-888-373-7888</span><span class="hotline-card__label">National Human Trafficking Hotline</span></a></li>
+                    <li><a href="sms:233733" class="hotline-card"><span class="hotline-card__number">Text 233733</span><span class="hotline-card__label">Human trafficking help (text "HELP" or "INFO")</span></a></li>
+                    <li><a href="tel:+18004224453" class="hotline-card"><span class="hotline-card__number">1-800-422-4453</span><span class="hotline-card__label">Childhelp National Child Abuse Hotline</span></a></li>
+                    <li><a href="tel:+18007997233" class="hotline-card"><span class="hotline-card__number">1-800-799-7233</span><span class="hotline-card__label">Safety planning &amp; relationship support</span></a></li>
+                </ul>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

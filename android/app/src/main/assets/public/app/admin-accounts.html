@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com; object-src 'none'; base-uri 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://*.tile.openstreetmap.org https://firebasestorage.googleapis.com https://storage.googleapis.com https://*.googleusercontent.com; connect-src 'self' blob: capacitor: ionic: https://nominatim.openstreetmap.org https://*.googleapis.com https://*.cloudfunctions.net https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://firebaseinstallations.googleapis.com; frame-src https://www.google.com https://www.recaptcha.net;">
+    <title>Manage Accounts - AVAP Admin</title>
+    <script src="/stateRestore.js" defer></script>
+    <script src="../mobileZoomLock.js" defer></script>
+  <script type="module" crossorigin src="/assets/index-3398f4bb-OqqepCzU.js"></script>
+  <script type="module" crossorigin src="/assets/login-BJx-YvTk.js"></script>
+  <script type="module" crossorigin src="/assets/index-CXRZ8T9h.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-3398f4bb-ClRPKboB.css">
+</head>
+<body class="admin-page auth-pending">
+    <div class="admin-top-bar">
+        <h1 class="admin-top-bar__title">AVAP Admin &mdash; Accounts</h1>
+        <div class="admin-top-bar__actions">
+            <button id="backToAdminButton" type="button" class="admin-top-bar__btn">Back to Admin</button>
+            <button id="logout-button" type="button" class="admin-top-bar__btn admin-top-bar__btn--logout" aria-label="Log out">Log Out</button>
+        </div>
+    </div>
+    <div class="container">
+        <main class="page-content">
+            <div class="content-card">
+                <h2>Admin Accounts</h2>
+                <p id="accounts-status" aria-live="polite">Loading accounts...</p>
+                <div class="accounts-table-wrap">
+                    <table id="accounts-table" class="accounts-table" aria-label="Admin accounts list">
+                        <thead>
+                            <tr>
+                                <th>Email</th>
+                                <th>Permissions</th>
+                                <th>Created</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="accounts-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2>Add Admin Account</h2>
+                <form id="add-account-form" class="admin-event-form" aria-label="Add a new admin account">
+                    <div class="admin-event-form__field">
+                        <label for="new-account-email">Email</label>
+                        <input type="email" id="new-account-email" name="email" placeholder="admin@example.com" required />
+                    </div>
+                    <div class="admin-event-form__field">
+                        <label for="new-account-password">Password</label>
+                        <input type="password" id="new-account-password" name="password" placeholder="Min 6 characters" required minlength="6" />
+                    </div>
+                    <fieldset class="admin-event-form__field perms-fieldset">
+                        <legend>Permissions</legend>
+                        <label class="perm-checkbox"><input type="checkbox" name="canCreate" /> Create</label>
+                        <label class="perm-checkbox"><input type="checkbox" name="canEdit" /> Edit</label>
+                        <label class="perm-checkbox"><input type="checkbox" name="canDelete" /> Delete</label>
+                    </fieldset>
+                    <div class="admin-event-form__actions">
+                        <button type="submit" id="create-account-button" class="admin-top-bar__btn admin-top-bar__btn--primary">Create Account</button>
+                    </div>
+                    <p id="add-account-status" class="admin-event-form__status" aria-live="polite"></p>
+                </form>
+            </div>
+            <div class="content-card">
+                <p class="perms-note"><strong>Note:</strong> After changing permissions, the affected admin must log out and back in for changes to take effect.</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

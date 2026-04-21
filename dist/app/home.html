@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com; object-src 'none'; base-uri 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://*.tile.openstreetmap.org https://firebasestorage.googleapis.com https://storage.googleapis.com https://*.googleusercontent.com; connect-src 'self' blob: capacitor: ionic: https://nominatim.openstreetmap.org https://*.googleapis.com https://*.cloudfunctions.net https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://firebaseinstallations.googleapis.com; frame-src https://www.google.com https://www.recaptcha.net;">
+    <title>Home - Alabama Victim Assistance Portal</title>
+    <style>html,body{background-color:#f2f3f5}</style>
+    <script src="/stateRestore.js" defer></script>
+    <script src="../mobileZoomLock.js" defer></script>
+  <script type="module" crossorigin src="/assets/home-H6FvZWT_.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/index-3398f4bb-CsHQMQCa.js">
+  <link rel="modulepreload" crossorigin href="/assets/index-CEhaUjHr.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-3398f4bb-CI4hmZZN.css">
+</head>
+<body>
+        <!-- Welcome Modal Injection -->
+        <div id="welcomeModal" class="welcome-popup" style="display:none !important; position:fixed; z-index:20000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.45); align-items:center; justify-content:center; padding:12px; box-sizing:border-box;">
+            <div class="welcome-popup-content">
+                <div class="welcome-popup-content__scroll">
+                <button id="closeWelcomeModal" style="float:right; background:none; border:none; font-size:1.2rem; color:var(--text-muted); cursor:pointer;">×</button>
+                <h2 style="margin-top:0;">Welcome to AVAP</h2>
+                <section style="margin-bottom:1.2rem;">
+                    <h3 style="margin-bottom:0.3rem;">Are you experiencing an immediate emergency?</h3>
+                    <div style="display:flex; gap:1rem; justify-content:center; margin-top:0.5rem;">
+                        <button id="emergencyYes" class="filter-btn" style="background:#d32f2f;color:#fff;min-width:80px;">Yes</button>
+                        <button id="emergencyNo" class="filter-btn" style="background:var(--teal);color:#fff;min-width:80px;">No</button>
+                    </div>
+                </section>
+                <section style="margin-bottom:1.2rem;">
+                    <h3 style="margin-bottom:0.3rem;">About AVAP</h3>
+                    <p>AVAP (Alabama Victim Assistance Portal) connects crime victims, survivors, and their families to trusted services and support across Alabama. The portal was developed by VOCAL – Victims of Crime and Leniency, an organization which has been supporting crime victims since 1982.</p>
+                </section>
+                <section style="margin-bottom:1.2rem;">
+                    <h3 style="margin-bottom:0.3rem;">How AVAP can help</h3>
+                    <p>Through AVAP you can find agencies that provide advocacy, counseling, legal assistance, financial support programs, and other services for crime victims.</p>
+                </section>
+                <section style="margin-bottom:1.2rem;">
+                    <h3 style="margin-bottom:0.3rem;">Finding resources</h3>
+                    <p>Use the filters to search by service type or county to locate help near you.</p>
+                </section>
+                </div>
+            </div>
+        </div>
+        <div class="top-bar">
+        <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-menu">
+            <span class="menu-toggle__icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+        <aside class="hotline-block hotline-block--top-bar-mobile" aria-label="Victim services hotlines">
+            <button type="button" class="hotline-block__trigger" aria-expanded="false" aria-controls="hotline-panel-top">
+                <span class="hotline-block__trigger-text">Need immediate help?</span>
+                <span class="hotline-block__trigger-text--short">Immediate help</span>
+                <span class="hotline-block__chevron" aria-hidden="true">▼</span>
+            </button>
+            <div class="hotline-block__panel" id="hotline-panel-top" aria-hidden="true">
+                <p class="hotline-block__subtext">24/7 victim services hotlines</p>
+                <p class="hotline-block__helper">Tap a number to call.</p>
+                <ul class="hotline-block__list">
+                    <li><a href="tel:+18002393219" class="hotline-card"><span class="hotline-card__number">1-800-239-3219</span><span class="hotline-card__label">VOCAL — Victims of Crime and Leniency</span></a></li>
+                    <li><a href="tel:+18006506522" class="hotline-card"><span class="hotline-card__number">1-800-650-6522</span><span class="hotline-card__label">Alabama Coalition Against Domestic Violence</span></a></li>
+                    <li><a href="tel:+18006564673" class="hotline-card"><span class="hotline-card__number">1-800-656-4673</span><span class="hotline-card__label">RAINN Sexual Assault Hotline</span></a></li>
+                </ul>
+                <a class="hotline-block__see-more" href="./hotline.html">See more hotlines</a>
+            </div>
+        </aside>
+    </div>
+    <nav id="main-menu" class="main-menu" aria-hidden="false">
+        <div class="main-menu__inner">
+            <ul class="main-menu__list">
+                <li><a href="./home.html" class="main-menu__link">Home</a></li>
+                <li><a href="./about.html" class="main-menu__link">About</a></li>
+                <li><a href="./calendar.html" class="main-menu__link">Calendar</a></li>
+                <li><a href="./hotline.html" class="main-menu__link">Hotlines</a></li>
+            </ul>
+            <aside class="hotline-block hotline-block--in-nav" aria-label="Victim services hotlines">
+                <button type="button" class="hotline-block__trigger" aria-expanded="false" aria-controls="hotline-panel-nav">
+                    <span class="hotline-block__trigger-text">Need immediate help?</span>
+                    <span class="hotline-block__trigger-text--short">Immediate help</span>
+                    <span class="hotline-block__chevron" aria-hidden="true">▼</span>
+                </button>
+                <div class="hotline-block__panel" id="hotline-panel-nav" aria-hidden="true">
+                    <p class="hotline-block__subtext">24/7 victim services hotlines</p>
+                    <p class="hotline-block__helper">Tap a number to call.</p>
+                    <ul class="hotline-block__list">
+                        <li><a href="tel:+18002393219" class="hotline-card"><span class="hotline-card__number">1-800-239-3219</span><span class="hotline-card__label">VOCAL — Victims of Crime and Leniency</span></a></li>
+                        <li><a href="tel:+18006506522" class="hotline-card"><span class="hotline-card__number">1-800-650-6522</span><span class="hotline-card__label">Alabama Coalition Against Domestic Violence</span></a></li>
+                        <li><a href="tel:+18006564673" class="hotline-card"><span class="hotline-card__number">1-800-656-4673</span><span class="hotline-card__label">RAINN Sexual Assault Hotline</span></a></li>
+                    </ul>
+                    <a class="hotline-block__see-more" href="./hotline.html">See more hotlines</a>
+                </div>
+            </aside>
+            <div class="main-menu__actions">
+                <button id="safety-exit" class="safety-exit-button" type="button" aria-label="Safety exit">
+                    Safety Exit
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <header>
+            <div class="header-row">
+                <div class="logo-crop">
+                    <img id="logo" src="/assets/AVAP-Logo-C6BSammJ.png" alt="AVAP Logo" />
+                </div>
+                <h1>Alabama Victim Assistance Portal</h1>
+            </div>
+            <div class="privacy-statement-mobile" aria-label="Privacy policy">
+                <span class="privacy-statement-mobile__text"><strong>Privacy Policy:</strong> This site does not collect, store, or track any personal information. No user data is saved, tracked, or shared. All searches are processed only in your browser and are never sent to a server or stored anywhere.</span>
+                <button type="button" class="privacy-statement-mobile__toggle" aria-expanded="false">more</button>
+            </div>
+            <div class="search-wrap">
+                <form id="search-form" role="search" action="#" method="get" aria-label="Site search">
+                    <label for="search-input" class="filter-label">Search by Name</label>
+                    <input id="search-input" name="q" type="search" placeholder="Search resources, services, locations..." aria-label="Search" />
+                    <button type="button" id="apply-filter-button" class="apply-filter-btn">Search</button>
+                </form>
+            </div>
+            <div class="filters-section">
+                <div class="filter-group county-filter-group">
+                    <label for="county-multiselect-trigger" class="filter-label">Filter by County (multi-select)</label>
+                    <div class="county-multiselect" id="county-multiselect">
+                        <button type="button" id="county-multiselect-trigger" class="county-multiselect__trigger" aria-haspopup="listbox" aria-expanded="false" aria-label="Filter by Alabama county (select multiple)">
+                            <span class="county-multiselect__label">All Counties</span>
+                            <span class="county-multiselect__chevron" aria-hidden="true">▼</span>
+                        </button>
+                        <div class="county-multiselect__panel" id="county-multiselect-panel" role="listbox" aria-hidden="true">
+                            <div class="county-multiselect__actions">
+                                <button type="button" class="county-multiselect__action-btn" data-action="select-all">Select All</button>
+                                <button type="button" class="county-multiselect__action-btn" data-action="clear">Clear</button>
+                            </div>
+                            <div class="county-multiselect__filter-wrap">
+                                <input type="search" id="county-multiselect-filter" class="county-multiselect__filter" autocomplete="off" placeholder="Type to find a county…" aria-label="Filter counties by name" enterkeyhint="search">
+                            </div>
+                            <p class="county-multiselect__filter-empty" id="county-multiselect-filter-empty" hidden>No counties match your search.</p>
+                            <div class="county-multiselect__list-wrapper">
+                                <div class="county-multiselect__list">
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Autauga"> Autauga</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Baldwin"> Baldwin</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Barbour"> Barbour</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Bibb"> Bibb</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Blount"> Blount</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Bullock"> Bullock</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Butler"> Butler</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Calhoun"> Calhoun</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Chambers"> Chambers</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Cherokee"> Cherokee</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Chilton"> Chilton</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Choctaw"> Choctaw</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Clarke"> Clarke</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Clay"> Clay</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Cleburne"> Cleburne</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Coffee"> Coffee</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Colbert"> Colbert</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Conecuh"> Conecuh</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Coosa"> Coosa</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Covington"> Covington</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Crenshaw"> Crenshaw</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Cullman"> Cullman</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Dale"> Dale</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Dallas"> Dallas</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="DeKalb"> DeKalb</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Elmore"> Elmore</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Escambia"> Escambia</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Etowah"> Etowah</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Fayette"> Fayette</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Franklin"> Franklin</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Geneva"> Geneva</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Greene"> Greene</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Hale"> Hale</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Henry"> Henry</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Houston"> Houston</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Jackson"> Jackson</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Jefferson"> Jefferson</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Lamar"> Lamar</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Lauderdale"> Lauderdale</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Lawrence"> Lawrence</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Lee"> Lee</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Limestone"> Limestone</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Lowndes"> Lowndes</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Macon"> Macon</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Madison"> Madison</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Marengo"> Marengo</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Marion"> Marion</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Marshall"> Marshall</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Mobile"> Mobile</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Monroe"> Monroe</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Montgomery"> Montgomery</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Morgan"> Morgan</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Perry"> Perry</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Pickens"> Pickens</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Pike"> Pike</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Randolph"> Randolph</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Russell"> Russell</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Shelby"> Shelby</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="St. Clair"> St. Clair</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Sumter"> Sumter</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Talladega"> Talladega</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Tallapoosa"> Tallapoosa</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Tuscaloosa"> Tuscaloosa</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Walker"> Walker</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Washington"> Washington</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Wilcox"> Wilcox</label>
+                                    <label class="county-multiselect__option"><input type="checkbox" name="county" value="Winston"> Winston</label>
+                                </div>
+                            </div>
+                            <button type="button" class="county-multiselect__done" id="county-multiselect-done">Done</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h2 class="filter-label">Filter by Category (multi-select)</h2>
+                    <div class="category-buttons" id="category-buttons" role="group" aria-label="Category filters"></div>
+                </div>
+            </div>
+        </header>
+        <main class="search-results-section" id="search-results-section" aria-live="polite">
+            <div id="search-results" class="search-results"></div>
+            <div id="show-more-wrapper" class="show-more-wrapper" aria-live="polite"></div>
+        </main>
+    </div>
+</body>
+</html>

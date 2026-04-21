@@ -1,0 +1,15 @@
+{
+	"appId": "org.vocalonline.AVAP",
+	"appName": "AVAP",
+	"webDir": "dist",
+	"backgroundColor": "#f2f3f5",
+	"android": {
+		"backgroundColor": "#f2f3f5"
+	},
+	"ios": {
+		"backgroundColor": "#f2f3f5"
+	},
+	"packageClassList": [
+		"AppPlugin"
+	]
+}
