@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>About - Alabama Victim Assistance Portal</title>
+    <style>html,body{background-color:#f2f3f5}</style>
+    <link rel="stylesheet" href="../css/styles.css">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com; object-src 'none'; base-uri 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://*.tile.openstreetmap.org https://firebasestorage.googleapis.com https://storage.googleapis.com https://*.googleusercontent.com; connect-src 'self' blob: capacitor: ionic: https://nominatim.openstreetmap.org https://*.googleapis.com https://*.cloudfunctions.net https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://firebaseinstallations.googleapis.com; frame-src https://www.google.com https://www.recaptcha.net;">
+    <script src="/stateRestore.js" defer></script>
+    <script src="../mobileZoomLock.js" defer></script>
+    <script type="module" src="./index.js"></script>
+</head>
+<body class="page-about">
+    <div class="top-bar">
+        <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-menu">
+            <span class="menu-toggle__icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+        <aside class="hotline-block hotline-block--top-bar-mobile" aria-label="Victim services hotlines">
+            <button type="button" class="hotline-block__trigger" aria-expanded="false" aria-controls="hotline-panel-top">
+                <span class="hotline-block__trigger-text">Need immediate help?</span>
+                <span class="hotline-block__trigger-text--short">Immediate help</span>
+                <span class="hotline-block__chevron" aria-hidden="true">▼</span>
+            </button>
+            <div class="hotline-block__panel" id="hotline-panel-top" aria-hidden="true">
+                <p class="hotline-block__subtext">24/7 victim services hotlines</p>
+                <p class="hotline-block__helper">Tap a number to call.</p>
+                <ul class="hotline-block__list">
+                    <li><a href="tel:+18002393219" class="hotline-card"><span class="hotline-card__number">1-800-239-3219</span><span class="hotline-card__label">VOCAL — Victims of Crime and Leniency</span></a></li>
+                    <li><a href="tel:+18006506522" class="hotline-card"><span class="hotline-card__number">1-800-650-6522</span><span class="hotline-card__label">Alabama Coalition Against Domestic Violence</span></a></li>
+                    <li><a href="tel:+18006564673" class="hotline-card"><span class="hotline-card__number">1-800-656-4673</span><span class="hotline-card__label">RAINN Sexual Assault Hotline</span></a></li>
+                </ul>
+                <a class="hotline-block__see-more" href="./hotline.html">See more hotlines</a>
+            </div>
+        </aside>
+    </div>
+    <nav id="main-menu" class="main-menu" aria-hidden="false">
+        <div class="main-menu__inner">
+            <ul class="main-menu__list">
+                <li><a href="./home.html" class="main-menu__link">Home</a></li>
+                <li><a href="./about.html" class="main-menu__link" aria-current="page">About</a></li>
+                <li><a href="./calendar.html" class="main-menu__link">Calendar</a></li>
+                <li><a href="./hotline.html" class="main-menu__link">Hotlines</a></li>
+            </ul>
+            <aside class="hotline-block hotline-block--in-nav" aria-label="Victim services hotlines">
+                <button type="button" class="hotline-block__trigger" aria-expanded="false" aria-controls="hotline-panel-nav">
+                    <span class="hotline-block__trigger-text">Need immediate help?</span>
+                    <span class="hotline-block__trigger-text--short">Immediate help</span>
+                    <span class="hotline-block__chevron" aria-hidden="true">▼</span>
+                </button>
+                <div class="hotline-block__panel" id="hotline-panel-nav" aria-hidden="true">
+                    <p class="hotline-block__subtext">24/7 victim services hotlines</p>
+                    <p class="hotline-block__helper">Tap a number to call.</p>
+                    <ul class="hotline-block__list">
+                        <li><a href="tel:+18002393219" class="hotline-card"><span class="hotline-card__number">1-800-239-3219</span><span class="hotline-card__label">VOCAL — Victims of Crime and Leniency</span></a></li>
+                        <li><a href="tel:+18006506522" class="hotline-card"><span class="hotline-card__number">1-800-650-6522</span><span class="hotline-card__label">Alabama Coalition Against Domestic Violence</span></a></li>
+                        <li><a href="tel:+18006564673" class="hotline-card"><span class="hotline-card__number">1-800-656-4673</span><span class="hotline-card__label">RAINN Sexual Assault Hotline</span></a></li>
+                    </ul>
+                    <a class="hotline-block__see-more" href="./hotline.html">See more hotlines</a>
+                </div>
+            </aside>
+            <div class="main-menu__actions">
+                <button id="safety-exit" class="safety-exit-button" type="button" aria-label="Safety exit">
+                    Safety Exit
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <header>
+            <div class="header-row">
+                <div class="logo-crop">
+                    <img id="logo" src="./AVAP-Logo.png" alt="AVAP Logo" />
+                </div>
+                <h1>About AVAP</h1>
+            </div>
+            <div class="privacy-statement-mobile" aria-label="Privacy policy">
+                <span class="privacy-statement-mobile__text"><strong>Privacy Policy:</strong> This site does not collect, store, or track any personal information. No user data is saved, tracked, or shared. All searches are processed only in your browser and are never sent to a server or stored anywhere.</span>
+                <button type="button" class="privacy-statement-mobile__toggle" aria-expanded="false">more</button>
+            </div>
+        </header>
+        <main class="page-content">
+            <div class="content-card">
+                <h2>Alabama Victim Assistance Portal</h2>
+                <p>AVAP connects crime victims, survivors, and their families to trusted services and support across Alabama. The portal was developed by <strong>VOCAL</strong>&mdash;Victims of Crime and Leniency&mdash;an organization that has been supporting crime victims since 1982.</p>
+                <p>VOCAL's main website offers news, statewide programs, chapter information, and other ways to learn about the organization and get involved beyond this portal.</p>
+                <p style="margin-top: 0.75rem;"><a href="https://vocalonline.org/" class="filter-btn" target="_blank" rel="noopener noreferrer" style="display: inline-block; text-decoration: none;">Visit VOCAL online</a></p>
+
+                <h2>What you can find here</h2>
+                <p>Through AVAP you can find agencies that provide advocacy, counseling, legal assistance, financial support programs, and other services for crime victims.</p>
+
+                <h2>Using the site</h2>
+                <p>Use the search and filters on the Home page to search by service type or county and locate help near you. Each resource has a "View on map" button to see its location. The Calendar page offers another way to explore upcoming events.</p>
+
+                <p style="margin-top: 1.5rem;"><a href="./home.html" class="filter-btn" style="display: inline-block; text-decoration: none;">Go to Home &amp; Resources</a></p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com; object-src 'none'; base-uri 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://*.tile.openstreetmap.org https://firebasestorage.googleapis.com https://storage.googleapis.com https://*.googleusercontent.com; connect-src 'self' blob: capacitor: ionic: https://nominatim.openstreetmap.org https://*.googleapis.com https://*.cloudfunctions.net https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://firebaseinstallations.googleapis.com; frame-src https://www.google.com https://www.recaptcha.net;">
+    <title>AVAP Admin Page</title>
+    <script src="/stateRestore.js" defer></script>
+    <script src="../mobileZoomLock.js" defer></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script type="module" src="./login.js"></script>
+    <script type="module" src="./index.js"></script>
+</head>
+<body class="admin-page auth-pending">
+    <div class="admin-top-bar">
+        <div class="admin-top-bar__title-wrap">
+            <h1 class="admin-top-bar__title">AVAP Admin</h1>
+            <p class="admin-top-bar__subtitle">Manage resources, categories, and events.</p>
+        </div>
+        <div class="admin-top-bar__actions">
+            <div class="admin-top-bar__group" aria-label="Management tools">
+                <button id="manageTagsButton" type="button" class="admin-top-bar__btn">Manage Tags</button>
+                <button id="manageEventsButton" type="button" class="admin-top-bar__btn">Manage Events</button>
+                <button id="manageAccountsButton" type="button" class="admin-top-bar__btn" style="display:none;">Manage Accounts</button>
+            </div>
+            <div class="admin-top-bar__group admin-top-bar__group--right" aria-label="Primary actions">
+                <button id="addResourceButton" type="button" class="admin-top-bar__btn admin-top-bar__btn--primary">Add Resource</button>
+                <button id="logout-button" type="button" class="admin-top-bar__btn admin-top-bar__btn--logout" aria-label="Log out">Log Out</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <section class="admin-toolbar" aria-label="Admin controls">
+            <div class="search-wrap admin-search">
+                <form id="search-form" role="search" action="#" method="get" aria-label="Admin search">
+                    <label for="search-input" class="visually-hidden">Search</label>
+                    <input id="search-input" name="q" type="search" placeholder="Search resources..." aria-label="Search resources" />
+                    <button id="search-button" type="submit" disabled>Search</button>
+                </form>
+            </div>
+            <!-- Collection dropdown + Show All button are injected above #dataTable by JS -->
+        </section>
+
+        <div class="admin-table-wrap" aria-label="Resources table">
+            <table id="dataTable"></table>
+        </div>
+    </div>
+</body>
+</html>

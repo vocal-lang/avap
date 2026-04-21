@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com; object-src 'none'; base-uri 'self'; connect-src 'self' https://*.googleapis.com https://*.cloudfunctions.net https://www.google.com https://firebaseinstallations.googleapis.com; frame-src https://www.google.com https://www.recaptcha.net;">
+    <title>Alabama Victim Assistance Portal</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background-color: #f2f3f5;
+        }
+
+        :root {
+            color-scheme: light;
+        }
+    </style>
+    <script src="/mobileZoomLock.js"></script>
+    <!-- Run before body paint so the entry URL redirects immediately (no loading screen). -->
+    <script src="/stateRestore.js"></script>
+</head>
+<body>
+    <noscript>
+        <p style="font-family: system-ui, sans-serif; padding: 1rem;"><a href="app/home.html">Continue to site</a></p>
+    </noscript>
+</body>
+</html>

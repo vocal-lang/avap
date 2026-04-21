@@ -1,0 +1,30 @@
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "redirects": [
+      { "source": "/client", "destination": "/app/login.html", "type": 301 },
+      { "source": "/client/", "destination": "/app/login.html", "type": 301 },
+      { "source": "/client/**", "destination": "/app/:splat", "type": 301 },
+      { "source": "/firebase", "destination": "/app/home.html", "type": 301 },
+      { "source": "/firebase/", "destination": "/app/home.html", "type": 301 },
+      { "source": "/firebase/**", "destination": "/app/:splat", "type": 301 },
+      { "source": "/Client/**", "destination": "/app/:splat", "type": 301 },
+      { "source": "/Firebase/**", "destination": "/app/:splat", "type": 301 }
+    ]
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git"
+      ]
+    }
+  ]
+}

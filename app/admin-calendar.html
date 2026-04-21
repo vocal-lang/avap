@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com; object-src 'none'; base-uri 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://*.tile.openstreetmap.org https://firebasestorage.googleapis.com https://storage.googleapis.com https://*.googleusercontent.com; connect-src 'self' blob: capacitor: ionic: https://nominatim.openstreetmap.org https://*.googleapis.com https://*.cloudfunctions.net https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://firebaseinstallations.googleapis.com; frame-src https://www.google.com https://www.recaptcha.net;">
+    <title>Manage Events - AVAP Admin</title>
+    <script src="/stateRestore.js" defer></script>
+    <script src="../mobileZoomLock.js" defer></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script type="module" src="./login.js"></script>
+    <script type="module" src="./index.js"></script>
+</head>
+<body class="admin-page auth-pending">
+    <div class="admin-top-bar">
+        <h1 class="admin-top-bar__title">AVAP Admin — Events</h1>
+        <div class="admin-top-bar__actions">
+            <button id="backToAdminButton" type="button" class="admin-top-bar__btn">Back to Admin</button>
+            <button id="logout-button" type="button" class="admin-top-bar__btn admin-top-bar__btn--logout" aria-label="Log out">Log Out</button>
+        </div>
+    </div>
+    <div class="container">
+        <main class="page-content">
+            <!-- Calendar (reuses existing renderMonthlyCalendar via events-calendar ID) -->
+            <div class="content-card">
+                <h2>Events Calendar</h2>
+                <p>Select a date to view its events, or use the form below to add or remove events.</p>
+                <div class="events-calendar__header" aria-label="Calendar month navigation">
+                    <button id="calendar-prev" type="button" class="events-calendar__nav-btn" aria-label="Previous month">Previous</button>
+                    <span id="calendar-month-label" class="events-calendar__month-label" aria-live="polite"></span>
+                    <button id="calendar-next" type="button" class="events-calendar__nav-btn" aria-label="Next month">Next</button>
+                </div>
+                <div id="events-calendar" class="events-calendar" aria-label="Monthly calendar"></div>
+                <div id="events-calendar-list" class="events-calendar-list" aria-label="Events for this month"></div>
+            </div>
+
+            <!-- Add Event Form (skeleton — no logic yet) -->
+            <div class="content-card">
+                <h2>Add Event</h2>
+                <form id="add-event-form" class="admin-event-form" aria-label="Add a new event">
+                    <input type="hidden" id="editing-event-id" value="" />
+                    <input type="hidden" id="editing-event-collection" value="" />
+                    <div class="admin-event-form__field">
+                        <label for="event-title">Title</label>
+                        <input type="text" id="event-title" name="title" placeholder="Event title" required />
+                    </div>
+                    <div class="admin-event-form__field">
+                        <label for="event-date">Date</label>
+                        <input type="date" id="event-date" name="date" required />
+                    </div>
+                    <div class="admin-event-form__field">
+                        <label for="event-time">Time</label>
+                        <input type="time" id="event-time" name="time" />
+                    </div>
+                    <div class="admin-event-form__field">
+                        <label for="event-county">County</label>
+                        <input type="text" id="event-county" name="county" placeholder="County name" />
+                    </div>
+                    <div class="admin-event-form__field">
+                        <label for="event-location">Location</label>
+                        <input type="text" id="event-location" name="location" placeholder="Address or venue" />
+                    </div>
+                    <div class="admin-event-form__field">
+                        <label for="event-website">Website</label>
+                        <input type="text" id="event-website" name="website" inputmode="url" autocomplete="url" placeholder="example.org/event or https://example.org/event" />
+                    </div>
+                    <div class="admin-event-form__field">
+                        <label for="event-description">Description</label>
+                        <textarea id="event-description" name="description" rows="3" placeholder="Brief description of the event"></textarea>
+                    </div>
+                    <div class="admin-event-form__actions">
+                        <button type="submit" id="save-event-button" class="admin-top-bar__btn admin-top-bar__btn--primary">Add Event</button>
+                        <button type="button" id="cancel-edit-event-button" class="admin-top-bar__btn" hidden>Cancel Edit</button>
+                    </div>
+                    <p id="event-form-status" class="admin-event-form__status" aria-live="polite"></p>
+                </form>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>
